@@ -12,7 +12,8 @@ def open_browser()
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-
+import random
+import time
 
 def open_browser(browser="chrome"):
     """
@@ -97,12 +98,17 @@ class Base():
     def close_browser(self):
         """关闭浏览器"""
         self.driver.quit()
-#    
-#     base = Base(driver
-#     url = "http://www.baidu.com/"
-#     base.open_url(url)
-#     time.sleep(2)
-#     base.close_browser()
+    def driver_back(self):
+        """返回上一页"""
+        self.driver.back()
+if __name__ == '__main__':
+    driver = open_browser()
+    base = Base(driver)
+    url = "http://www.baidu.com/"
+    base.open_url(url)
+
+    time.sleep(2)
+    base.close_browser()
 
 
 
