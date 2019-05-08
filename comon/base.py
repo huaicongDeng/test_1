@@ -97,9 +97,8 @@ class Base():
     def close_browser(self):
         """关闭浏览器"""
         self.driver.quit()
-# if __name__ == '__main__':
-#     driver = open_browser()
-#     base = Base(driver)
+#    
+#     base = Base(driver
 #     url = "http://www.baidu.com/"
 #     base.open_url(url)
 #     time.sleep(2)
